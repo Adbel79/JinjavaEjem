@@ -6,8 +6,7 @@ btnregistrar.addEventListener("click", () => {
     axios.post("http://localhost:4567/registrar", {
         modelo: document.getElementById("modelo").value,
         dueno: document.getElementById("dueno").value
-    })
-        .then(function (res) {
+    }).then(function (res) {
             alert("Automovil:" + res.data.status + " id:" + res.data.id);
             modelo = document.getElementById("modelo").value;
             dueno = res.data.id;
@@ -19,8 +18,5 @@ btnregistrar.addEventListener("click", () => {
 
 var btnLista = document.getElementById("btnLista");
 btnLista.addEventListener("click", () => {
-    axios.get("http://localhost:4567/jinjava")
-        .then(function (res) {
-        })
-        .catch()
+    window.location.replace("http://localhost:4567/jinjava");
 });

@@ -1,11 +1,12 @@
 <html>
   <body>
-    {% if modelo %}
-    <ul>
-    {% for autiomovil in modelo %}
-        <li>{{ automovil.modelo|e }}</li>
-    {% endfor %}
-    </ul>
-    {% endif %}
+    <h1>Autos Registrados</h1>
+      <dl>
+      {% for dueno, modelo in nombre %}
+        -----------------------
+        <dt>{{ dueno|e }}</dt>
+        <dd>{{ modelo|e }}</dd>
+      {% endfor %}
+  </dl>
   </body>
 </html>

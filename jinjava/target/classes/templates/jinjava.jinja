@@ -1,0 +1,11 @@
+<html>
+  <body>
+    {% if modelo %}
+    <ul>
+    {% for autiomovil in modelo %}
+        <li>{{ automovil.modelo|e }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+  </body>
+</html>

@@ -1,12 +1,19 @@
 <html>
   <body>
     <h1>Autos Registrados</h1>
-      <dl>
+    {% if nombre %}
+        <dl>
       {% for dueno, modelo in nombre %}
         -----------------------
         <dt>{{ dueno|e }}</dt>
         <dd>{{ modelo|e }}</dd>
       {% endfor %}
-  </dl>
+    </dl>
+    {% elif kenny.dead %}
+        No hay nada en la lista
+    {% else %}
+        No hay nada en la lista
+    {% endif %}
+    
   </body>
 </html>
